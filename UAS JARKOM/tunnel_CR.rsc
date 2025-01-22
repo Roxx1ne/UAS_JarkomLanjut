@@ -6,12 +6,12 @@
 /interface bridge
 add comment="OSPF loopback" name=loopback
 /interface wireless
-set [ find default-name=wlan1 ] ssid=MikroTik
+set [ find default-name=wlan1 ] ssid=Citra
 /interface ipip
 add local-address=10.1.1.1 name=ipip-tunnel-to-B remote-address=172.16.1.1
 add local-address=10.1.1.1 name=ipip-tunnel-to-C remote-address=192.168.100.1
 /interface wireless security-profiles
-set [ find default=yes ] supplicant-identity=MikroTik
+set [ find default=yes ] supplicant-identity=Citra
 /ip pool
 add name=dhcp_pool0 ranges=192.168.1.18-192.168.1.30
 /ip dhcp-server
