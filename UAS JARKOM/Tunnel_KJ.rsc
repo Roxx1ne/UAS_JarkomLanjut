@@ -4,7 +4,7 @@
 # model = RB941-2nD
 # serial number = D1130FD936AB
 /interface wireless
-set [ find default-name=wlan1 ] name=wlan2 ssid=MikroTik
+set [ find default-name=wlan1 ] name=wlan2 ssid=KJ
 /interface bridge
 add comment="OSPF loopback" name=loopback
 /interface ethernet
@@ -19,7 +19,7 @@ add local-address=192.168.100.1 name=ipip-tunnel-to-A remote-address=10.1.1.1
 add local-address=192.168.100.1 name=ipip-tunnel-to-B remote-address=\
     172.16.1.1
 /interface wireless security-profiles
-set [ find default=yes ] supplicant-identity=MikroTik
+set [ find default=yes ] supplicant-identity=KJ
 /ip pool
 add name=dhcp_pool0 ranges=192.168.1.18-192.168.1.30
 /ip dhcp-server
